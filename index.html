@@ -1,409 +1,293 @@
-<body class="bg-gray-50 text-gray-800 font-sans">
+<!DOCTYPE html>
+<html lang="id" class="scroll-smooth">
+<head>
+    <meta charset="UTF-8">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <title>OilSwap! | Swap the Drip</title>
+    <script src="https://cdn.tailwindcss.com"></script>
+    <link href="https://fonts.googleapis.com/css2?family=Plus+Jakarta+Sans:wght@400;600;700;800&display=swap" rel="stylesheet">
+    <style>
+        body { font-family: 'Plus Jakarta Sans', sans-serif; }
+        .glass { background: rgba(15, 23, 42, 0.6); backdrop-filter: blur(12px); border: 1px solid rgba(255, 255, 255, 0.1); }
+        .neon-border { box-shadow: 0 0 15px rgba(52, 211, 153, 0.2); }
+        .glow-green { background: radial-gradient(circle, rgba(16, 185, 129, 0.15) 0%, transparent 70%); }
+    </style>
+</head>
+<body class="bg-slate-950 text-slate-100 selection:bg-emerald-500/30">
 
-    <nav class="bg-green-600 text-white p-4 shadow-md sticky top-0 z-50">
-        <div class="container mx-auto flex justify-between items-center">
-            <h1 class="text-2xl font-bold flex items-center gap-2">
-                💧 OilSwap!
-            </h1>
-            <ul class="flex gap-6 text-sm font-semibold">
-                <li><a href="#home" class="hover:text-green-200">Beranda</a></li>
-                <li><a href="#deposit" class="hover:text-green-200">Setor Sekarang</a></li>
-                <li><a href="#schedule" class="hover:text-green-200">Jadwal Jemput</a></li>
-                <li><a href="#chat" class="hover:text-green-200">Tanya Jelantah</a></li>
+    <nav class="fixed top-0 w-full z-50 px-4 py-4">
+        <div class="max-w-6xl mx-auto glass rounded-2xl px-6 py-3 flex justify-between items-center">
+            <div class="flex items-center gap-3">
+                <div class="w-10 h-10 bg-emerald-500 rounded-xl flex items-center justify-center text-2xl shadow-[0_0_20px_rgba(16,185,129,0.5)]">💧</div>
+                <h1 class="text-xl font-extrabold tracking-tighter bg-gradient-to-r from-white to-slate-400 bg-clip-text text-transparent">OilSwap!</h1>
+            </div>
+            <ul class="hidden md:flex gap-8 text-xs font-bold uppercase tracking-widest text-slate-400">
+                <li><a href="#home" class="hover:text-emerald-400 transition">Home</a></li>
+                <li><a href="#deposit" class="hover:text-emerald-400 transition">Setor</a></li>
+                <li><a href="#chat" class="hover:text-emerald-400 transition">AI Chat</a></li>
             </ul>
+            <a href="#deposit" class="bg-emerald-500 hover:bg-emerald-400 text-slate-950 px-5 py-2 rounded-xl text-xs font-black transition transform hover:scale-105 active:scale-95">
+                MULAI CUAN ↗
+            </a>
         </div>
     </nav>
 
-    <!-- HERO -->
-    <section id="home" class="hero-bg py-20 text-center px-4">
-        <div class="container mx-auto max-w-3xl">
-            <h2 class="text-4xl font-extrabold text-green-800 mb-4">
-                Swap the Drip, Secure the Bag.
+    <section id="home" class="relative pt-32 pb-20 overflow-hidden">
+        <div class="absolute top-0 left-1/2 -translate-x-1/2 w-full h-full glow-green -z-10"></div>
+        
+        <div class="max-w-6xl mx-auto px-4 text-center">
+            <div class="inline-flex items-center gap-2 px-4 py-2 rounded-full glass mb-8 animate-bounce">
+                <span class="text-emerald-400 text-xs font-bold">✨ Best Eco-Startup 2025</span>
+            </div>
+            <h2 class="text-5xl md:text-7xl font-black mb-6 tracking-tight">
+                Jelantah Jadi <span class="bg-gradient-to-r from-emerald-400 to-cyan-400 bg-clip-text text-transparent italic underline decoration-cyan-500/30">Saldo DANA.</span>
             </h2>
-            <p class="text-xl font-medium text-gray-700 mb-8">
-                Ubah minyak sisa penggorengan Anda menjadi uang tunai. Kontribusi kecil, cuan besar!
+            <p class="max-w-2xl mx-auto text-slate-400 text-lg mb-10 leading-relaxed">
+                Platform #1 Gen-Z buat nuker minyak goreng bekas jadi uang elektronik. Gak perlu ribet keluar rumah, kurir kami yang samper!
             </p>
-
-            <div class="bg-white p-6 rounded-xl shadow-lg inline-block transform hover:scale-105 transition duration-300">
-                <p class="text-gray-500 text-sm uppercase tracking-wide">Harga Beli Hari Ini</p>
-                <p class="text-4xl font-bold text-green-600 mt-2">
-                    Rp 6.500 <span class="text-lg text-gray-400">/ Liter</span>
-                </p>
+            
+            <div class="flex flex-col md:flex-row justify-center gap-4">
+                <a href="#deposit" class="px-8 py-4 bg-white text-slate-950 rounded-2xl font-bold text-lg hover:bg-emerald-400 transition shadow-xl shadow-white/5">
+                    Setor Sekarang 🚛
+                </a>
+                <a href="#chat" class="px-8 py-4 glass rounded-2xl font-bold text-lg hover:border-emerald-500/50 transition">
+                    Tanya AI Bot 🤖
+                </a>
             </div>
         </div>
     </section>
 
-    <!-- FORM PENYETORAN -->
-    <section id="deposit" class="py-16 bg-white">
-        <div class="container mx-auto max-w-2xl px-4">
-            <div class="bg-white p-8 rounded-xl shadow-lg border border-green-100">
-                <div class="text-center mb-8">
-                    <h3 class="text-2xl font-bold text-gray-800">Formulir Penyetoran</h3>
-                    <p class="text-gray-500 text-sm">Data akan dikirim otomatis ke WhatsApp Admin</p>
+    <section class="max-w-6xl mx-auto px-4 py-10 grid grid-cols-1 md:grid-cols-3 gap-6">
+        <div class="glass p-8 rounded-[2rem] flex flex-col justify-between hover:border-emerald-500/50 transition">
+            <p class="text-slate-400 font-bold uppercase text-xs tracking-widest mb-4">Harga Hari Ini</p>
+            <h3 class="text-4xl font-black text-emerald-400">Rp 6.500 <span class="text-sm text-slate-500">/L</span></h3>
+            <div class="mt-6 flex items-center gap-2 text-xs text-emerald-500 bg-emerald-500/10 w-fit px-3 py-1 rounded-full border border-emerald-500/20">
+                <span>↑ 2% dari kemarin</span>
+            </div>
+        </div>
+        <div class="glass p-8 rounded-[2rem] md:col-span-2 relative overflow-hidden group">
+            <div class="relative z-10">
+                <p class="text-slate-400 font-bold uppercase text-xs tracking-widest mb-4">Total Impact</p>
+                <h3 class="text-4xl font-black">12.450 Liter <span class="text-emerald-500">Terselamatkan</span></h3>
+                <p class="mt-4 text-slate-500 text-sm">Sama dengan mencegah pencemaran 12 Juta liter air tanah.</p>
+            </div>
+            <div class="absolute -right-10 -bottom-10 w-40 h-40 bg-emerald-500/20 blur-3xl group-hover:bg-emerald-500/40 transition"></div>
+        </div>
+    </section>
+
+    <section id="deposit" class="max-w-6xl mx-auto px-4 py-20">
+        <div class="grid grid-cols-1 lg:grid-cols-2 gap-12 items-start">
+            <div>
+                <h2 class="text-4xl font-black mb-6 italic text-emerald-400">#GreenFlag Energy</h2>
+                <p class="text-slate-400 mb-8">Pilih metode setor, isi data, dan biarkan sistem fuzzy kami yang ngatur jadwal paling efisien buat jemput di rumah lo.</p>
+                
+                <div class="space-y-4">
+                    <div class="flex gap-4 p-4 glass rounded-2xl items-center border-l-4 border-emerald-500">
+                        <span class="text-3xl">📱</span>
+                        <div>
+                            <h4 class="font-bold">Tanpa Aplikasi</h4>
+                            <p class="text-xs text-slate-500">Semua lewat WhatsApp. Gak bikin memori HP penuh.</p>
+                        </div>
+                    </div>
+                    <div class="flex gap-4 p-4 glass rounded-2xl items-center border-l-4 border-cyan-500">
+                        <span class="text-3xl">⚡</span>
+                        <div>
+                            <h4 class="font-bold">Smart Scheduling</h4>
+                            <p class="text-xs text-slate-500">Prioritas jemput tinggi buat yang setor banyak & lokasi strategis.</p>
+                        </div>
+                    </div>
                 </div>
+            </div>
 
-                <form onsubmit="kirimWhatsApp(event)">
-                    <div class="mb-4">
-                        <label class="block text-sm font-medium text-gray-700 mb-1">Nama Lengkap</label>
-                        <input type="text" id="nama" required placeholder="Contoh: Raihan Eka"
-                               class="w-full p-3 border rounded-lg focus:ring-green-500 focus:border-green-500">
+            <div class="glass p-8 rounded-[2.5rem] relative shadow-2xl">
+                <form onsubmit="kirimWhatsApp(event)" class="space-y-5">
+                    <div class="grid grid-cols-2 gap-4">
+                        <div class="col-span-2 md:col-span-1">
+                            <label class="block text-[10px] font-black uppercase text-slate-500 mb-2 ml-1">Full Name</label>
+                            <input type="text" id="nama" required class="w-full bg-slate-900 border border-slate-800 p-4 rounded-2xl focus:border-emerald-500 outline-none transition" placeholder="Michael Owen">
+                        </div>
+                        <div class="col-span-2 md:col-span-1">
+                            <label class="block text-[10px] font-black uppercase text-slate-500 mb-2 ml-1">WhatsApp</label>
+                            <input type="tel" id="noHp" required class="w-full bg-slate-900 border border-slate-800 p-4 rounded-2xl focus:border-emerald-500 outline-none transition" placeholder="0812...">
+                        </div>
                     </div>
 
-                    <div class="mb-4">
-                        <label class="block text-sm font-medium text-gray-700 mb-1">Nomor WhatsApp (Aktif)</label>
-                        <input type="tel" id="noHp" required placeholder="0812..."
-                               class="w-full p-3 border rounded-lg focus:ring-green-500 focus:border-green-500">
+                    <div>
+                        <label class="block text-[10px] font-black uppercase text-slate-500 mb-2 ml-1">Alamat (Drop Pin)</label>
+                        <textarea id="alamat" rows="2" class="w-full bg-slate-900 border border-slate-800 p-4 rounded-2xl focus:border-emerald-500 outline-none transition" placeholder="Jl. Jenderal Gatot Subroto, No. 1"></textarea>
                     </div>
 
-                    <div class="mb-4">
-                        <label class="block text-sm font-medium text-gray-700 mb-1">Alamat Lengkap (Untuk Penjemputan)</label>
-                        <textarea id="alamat" rows="3" required placeholder="Jalan Mawar No. 12, Kelurahan..."
-                                  class="w-full p-3 border rounded-lg focus:ring-green-500 focus:border-green-500"></textarea>
-                    </div>
-
-                    <!-- INPUT TAMBAHAN UNTUK FUZZY PENJADWALAN -->
-                    <div class="mb-4 grid grid-cols-1 md:grid-cols-2 gap-4">
+                    <div class="grid grid-cols-2 gap-4">
                         <div>
-                            <label class="block text-sm font-medium text-gray-700 mb-1">Frekuensi Menggoreng</label>
-                            <select id="frekuensi" class="w-full p-3 border rounded-lg bg-white">
-                                <option value="jarang">Jarang (1–2x/minggu)</option>
-                                <option value="sedang">Sedang (3–5x/minggu)</option>
-                                <option value="sering">Sering (hampir tiap hari)</option>
-                            </select>
+                            <label class="block text-[10px] font-black uppercase text-slate-500 mb-2 ml-1">Jumlah (Liter)</label>
+                            <input type="number" id="jumlah" oninput="hitungAll()" class="w-full bg-slate-900 border border-emerald-500/50 p-4 rounded-2xl text-emerald-400 font-bold outline-none" placeholder="5">
                         </div>
                         <div>
-                            <label class="block text-sm font-medium text-gray-700 mb-1">Perkiraan Jarak ke Gudang</label>
-                            <select id="jarak" class="w-full p-3 border rounded-lg bg-white">
-                                <option value="dekat">&lt; 3 km</option>
-                                <option value="sedang">3–7 km</option>
-                                <option value="jauh">&gt; 7 km</option>
+                            <label class="block text-[10px] font-black uppercase text-slate-500 mb-2 ml-1">Metode</label>
+                            <select id="metode" onchange="hitungAll()" class="w-full bg-slate-900 border border-slate-800 p-4 rounded-2xl outline-none">
+                                <option value="Request Penjemputan">Jemput 🚛</option>
+                                <option value="Antar Sendiri">Antar 🚲</option>
                             </select>
                         </div>
                     </div>
 
-                    <div class="mb-4">
-                        <label class="block text-sm font-medium text-gray-700 mb-1">Kepadatan Area</label>
-                        <select id="kepadatan" class="w-full p-3 border rounded-lg bg-white">
-                            <option value="rendah">Perumahan sepi</option>
-                            <option value="sedang">Perumahan biasa</option>
-                            <option value="tinggi">Padat (banyak rumah/kontrakan)</option>
-                        </select>
-                    </div>
-
-                    <div class="mb-4">
-                        <label class="block text-sm font-medium text-gray-700 mb-1">Metode Penyetoran</label>
-                        <select id="metode" class="w-full p-3 border rounded-lg bg-white" onchange="cekMetode(); hitungJadwal();">
-                            <option value="Antar Sendiri">Antar Sendiri ke Gudang (Gratis)</option>
-                            <option value="Request Penjemputan">Request Penjemputan (Min. 5 Liter)</option>
-                        </select>
-                        <p id="infoJemput" class="text-xs text-orange-500 mt-1 hidden font-semibold">
-                            ⚠️ Penjemputan di bawah 10 Liter dikenakan biaya Rp 2.000
-                        </p>
-                    </div>
-
-                    <div class="mb-6">
-                        <label class="block text-sm font-medium text-gray-700 mb-1">Perkiraan Jumlah (Liter)</label>
-                        <input type="number" id="jumlah" required placeholder="0"
-                               class="w-full p-3 border rounded-lg focus:ring-green-500 focus:border-green-500"
-                               oninput="hitungEstimasi(); hitungJadwal();">
-                        <div class="flex justify-between text-sm text-gray-500 mt-2">
-                            <p>Estimasi Pendapatan: <span id="estimasi" class="font-bold text-green-600">Rp 0</span></p>
-                            <p>Rekomendasi Jadwal: <span id="jadwalRekomendasi" class="font-semibold text-green-700">-</span></p>
+                    <div class="bg-emerald-500/5 border border-emerald-500/20 p-5 rounded-3xl">
+                        <div class="flex justify-between items-center mb-2">
+                            <span class="text-[10px] font-black text-emerald-500 uppercase tracking-widest">Estimasi Pendapatan</span>
+                            <span id="estimasi" class="text-xl font-black text-emerald-400">Rp 0</span>
+                        </div>
+                        <div class="flex items-center gap-2">
+                            <div class="w-2 h-2 rounded-full bg-emerald-500 animate-pulse"></div>
+                            <span id="jadwalRekomendasi" class="text-[11px] text-slate-400 font-medium italic">Masukkan jumlah liter...</span>
                         </div>
                     </div>
 
-                    <button type="submit"
-                            class="w-full bg-green-500 hover:bg-green-600 text-white font-bold py-4 rounded-lg transition duration-300 flex justify-center items-center gap-2">
-                        <span>Kirim via WhatsApp</span>
-                        <svg xmlns="http://www.w3.org/2000/svg" width="24" height="24"
-                             viewBox="0 0 24 24" fill="currentColor">
-                            <path
-                                d="M.057 24l1.687-6.163c-1.041-1.804-1.588-3.849-1.587-5.946.003-6.556 5.338-11.891 11.893-11.891 3.181.001 6.167 1.24 8.413 3.488 2.245 2.248 3.481 5.236 3.48 8.414-.003 6.557-5.338 11.892-11.893 11.892-1.99-.001-3.951-.5-5.688-1.448l-6.305 1.654zm6.597-3.807c1.676.995 3.276 1.591 5.392 1.592 5.448 0 9.886-4.434 9.889-9.885.002-5.462-4.415-9.89-9.881-9.892-5.452 0-9.887 4.434-9.889 9.884-.001 2.225.651 3.891 1.746 5.634l-.999 3.648 3.742-.981zm11.387-5.464c-.074-.124-.272-.198-.57-.347-.297-.149-1.758-.868-2.031-.967-.272-.099-.47-.149-.669.149-.198.297-.768.967-.941 1.165-.173.198-.347.223-.644.074-.297-.149-1.255-.462-2.39-1.475-.883-.788-1.48-1.761-1.653-2.059-.173-.297-.018-.458.13-.606.134-.133.297-.347.446-.521.151-.172.2-.296.3-.495.099-.198.05-.372-.025-.521-.075-.148-.669-1.611-.916-2.206-.242-.579-.487-.501-.669-.51l-.57-.01c-.198 0-.52.074-.792.372-.272.297-1.04 1.017-1.04 2.479 0 1.462 1.065 2.875 1.213 3.074.149.198 2.095 3.2 5.076 4.487 2.982 1.288 2.982.858 3.526.802.544-.056 1.729-.706 1.976-1.387.247-.681.247-1.264.173-1.387z"/>
-                        </svg>
+                    <button type="submit" class="w-full bg-emerald-500 text-slate-950 font-black py-5 rounded-2xl shadow-[0_10px_30px_rgba(16,185,129,0.3)] hover:scale-[1.02] active:scale-95 transition text-lg">
+                        CONFIRM SWAP ⚡
                     </button>
                 </form>
             </div>
         </div>
     </section>
 
-    <!-- SECTION PENJADWALAN (INFO) -->
-    <section id="schedule" class="py-12 bg-green-50">
-        <div class="container mx-auto max-w-3xl px-4">
-            <h3 class="text-2xl font-bold text-gray-800 mb-2">Penjadwalan Jemput Pintar</h3>
-            <p class="text-gray-600 text-sm mb-4">
-                Sistem menghitung prioritas jemput berdasarkan volume jelantah, jarak ke gudang, frekuensi menggoreng, dan kepadatan area. Ini meniru logika fuzzy sederhana untuk membantu optimasi rute dan efisiensi penjemputan.
-            </p>
-            <p class="text-gray-600 text-sm">
-                Nilai prioritas digunakan untuk menyarankan hari jemput dan ikut disertakan dalam pesan WhatsApp ke admin sebagai bahan pengambilan keputusan.
-            </p>
-        </div>
-    </section>
-
-    <!-- CHAT NLP: TANYA JELANTAH -->
-    <section id="chat" class="py-16 bg-white">
-        <div class="container mx-auto max-w-2xl px-4">
-            <div class="bg-white p-8 rounded-xl shadow-lg border border-green-100">
-                <h3 class="text-2xl font-bold text-gray-800 mb-2">Tanya Jelantah (Beta)</h3>
-                <p class="text-gray-500 text-sm mb-4">
-                    Tanyakan apa saja seputar minyak jelantah: bahaya, cara simpan, cara setor, dan kerja sama dengan UMKM.
-                </p>
-
-                <div class="border rounded-lg p-4 h-64 overflow-y-auto mb-4 bg-gray-50" id="chatWindow">
-                    <div class="text-sm text-gray-700 mb-2">
-                        <span class="font-semibold text-green-700">Bot:</span>
-                        Halo! Ketik pertanyaan kamu tentang jelantah, misalnya: "bahaya jelantah", "cara simpan minyak", atau "setor ke UMKM".
+    <section id="chat" class="max-w-4xl mx-auto px-4 py-20">
+        <div class="glass rounded-[3rem] overflow-hidden">
+            <div class="bg-emerald-500 p-6 flex items-center justify-between">
+                <div class="flex items-center gap-3">
+                    <div class="w-10 h-10 bg-white/20 rounded-full flex items-center justify-center">🤖</div>
+                    <div>
+                        <h4 class="text-slate-950 font-black text-sm">OilSwap AI Beta</h4>
+                        <p class="text-slate-900/60 text-[10px] font-bold uppercase tracking-widest">Online & Ready</p>
                     </div>
                 </div>
-
-                <form onsubmit="handleChat(event)" class="flex gap-2">
-                    <input type="text" id="chatInput" placeholder="Ketik pertanyaan di sini..."
-                           class="flex-1 p-3 border rounded-lg focus:ring-green-500 focus:border-green-500" required>
-                    <button type="submit"
-                            class="px-4 py-3 bg-green-500 hover:bg-green-600 text-white font-bold rounded-lg">
-                        Kirim
-                    </button>
-                </form>
             </div>
+            <div id="chatWindow" class="h-80 overflow-y-auto p-6 space-y-4 bg-slate-900/50">
+                <div class="flex flex-col gap-1 max-w-[80%]">
+                    <span class="text-[10px] font-bold text-slate-500 uppercase ml-2">OilBot</span>
+                    <div class="bg-slate-800 p-4 rounded-2xl rounded-tl-none text-sm">
+                        Yo! Gue OilBot. Mau tau apa? <br>
+                        Coba ketik: <span class="text-emerald-400">"bahaya jelantah"</span> atau <span class="text-emerald-400">"cara simpan"</span>.
+                    </div>
+                </div>
+            </div>
+            <form onsubmit="handleChat(event)" class="p-4 bg-slate-950 flex gap-2">
+                <input type="text" id="chatInput" class="flex-1 bg-slate-900 border border-slate-800 p-4 rounded-2xl outline-none focus:border-emerald-500 transition" placeholder="Tanya sesuatu...">
+                <button class="bg-emerald-500 p-4 rounded-2xl hover:scale-105 transition">
+                    🚀
+                </button>
+            </form>
         </div>
     </section>
 
-    <footer class="bg-gray-800 text-gray-400 py-8 text-center text-sm">
-        <p>&copy; 2024 OilSwap! Indonesia.</p>
+    <footer class="py-10 text-center text-slate-600 text-[11px] font-medium tracking-widest uppercase">
+        &copy; 2024 OilSwap! • Zero Waste Gen • Made with Love for Earth
     </footer>
 
-    <script>
-        // --- KONFIGURASI ADMIN ---
-        const NOMOR_ADMIN = "6281294949206";
-        const HARGA_PER_LITER = 6500;
+   <script>
+    const HARGA = 6500;
+    const NOMOR_ADMIN = "6281294949206";
 
-        function formatRupiah(angka) {
-            return new Intl.NumberFormat('id-ID', {
-                style: 'currency',
-                currency: 'IDR',
-                minimumFractionDigits: 0
-            }).format(angka);
+    // KNOWLEDGE BASE UNTUK AI BOT (Intent Mapping)
+    const BOT_BRAIN = [
+        {
+            intent: "bahaya",
+            keywords: ["bahaya", "racun", "sakit", "kesehatan", "kanker", "limbah"],
+            reply: "Jelantah itu mengandung senyawa karsinogenik kalau dipakai terus! Plus, kalau dibuang ke selokan bisa nyumbat pipa dan ngerusak ekosistem air. Mending jadiin cuan di sini! 🌍"
+        },
+        {
+            intent: "simpan",
+            keywords: ["simpan", "wadah", "botol", "taruh", "persiapan", "saring"],
+            reply: "Gampang! 1. Tunggu minyak dingin. 2. Saring ampas makanan. 3. Masukin ke botol plastik/jerigen tertutup rapat. Jangan campur air atau sabun ya! 🧴"
+        },
+        {
+            intent: "setor",
+            keywords: ["setor", "jemput", "cara", "mekanisme", "prosedur", "panggil"],
+            reply: "Tinggal isi formulir 'Confirm Swap' di atas. Masukin nama, alamat, dan jumlah liter. Nanti sistem pintar kita bakal nentuin jadwal jemput kurir ke rumah lo! 🚛"
+        },
+        {
+            intent: "umkm",
+            keywords: ["umkm", "jadi apa", "produk", "diolah", "manfaat"],
+            reply: "Minyak lo bakal disalurkan ke UMKM lokal buat diolah jadi Sabun Cuci, Lilin Aromaterapi, atau bahkan Biodiesel! Dari limbah jadi energi baru. Keren kan? ✨"
+        },
+        {
+            intent: "salam",
+            keywords: ["halo", "hai", "p", "siapa", "oilbot", "hi"],
+            reply: "Yo! Gue OilBot. Gue siap bantu lo paham soal limbah jelantah. Mau nanya soal 'bahaya jelantah' atau 'cara simpan'?"
         }
+    ];
 
-        // ESTIMASI PENDAPATAN
-        function hitungEstimasi() {
-            const jumlah = Number(document.getElementById('jumlah').value || 0);
-            const total = jumlah * HARGA_PER_LITER;
-            document.getElementById('estimasi').innerText = formatRupiah(total);
+    function hitungAll() {
+        const jml = Number(document.getElementById('jumlah').value || 0);
+        document.getElementById('estimasi').innerText = new Intl.NumberFormat('id-ID', {
+            style: 'currency', currency: 'IDR', minimumFractionDigits: 0
+        }).format(jml * HARGA);
+
+        let rec = document.getElementById('jadwalRekomendasi');
+        if (jml <= 0) { rec.innerText = "Masukkan jumlah liter..."; return; }
+        
+        if (jml >= 10) {
+            rec.innerText = "Prioritas Tinggi: Penjemputan 1-2 Hari! 🔥";
+        } else if (jml >= 5) {
+            rec.innerText = "Prioritas Sedang: Penjemputan 3-5 Hari 🚛";
+        } else {
+            rec.innerText = "Disarankan antar sendiri / Gabung kolektif 🚲";
         }
+    }
 
-        function cekMetode() {
-            const metode = document.getElementById('metode').value;
-            const info = document.getElementById('infoJemput');
-            if (metode === 'Request Penjemputan') {
-                info.classList.remove('hidden');
-            } else {
-                info.classList.add('hidden');
+    // FUNGSI AI CHAT REVISI
+    function handleChat(e) {
+        e.preventDefault();
+        const inputEl = document.getElementById('chatInput');
+        const win = document.getElementById('chatWindow');
+        const userText = inputEl.value.toLowerCase().trim();
+        
+        if(!userText) return;
+
+        // Tampilkan Chat User
+        win.innerHTML += `
+            <div class="flex flex-col items-end gap-1 ml-auto max-w-[85%]">
+                <span class="text-[10px] font-bold text-slate-500 uppercase mr-2">You</span>
+                <div class="bg-emerald-500 text-slate-950 p-4 rounded-2xl rounded-tr-none text-sm font-bold shadow-lg shadow-emerald-500/20 leading-relaxed">
+                    ${inputEl.value}
+                </div>
+            </div>`;
+        
+        inputEl.value = ""; // Clear input
+        win.scrollTop = win.scrollHeight;
+
+        // Proses Jawaban dengan Pencocokan Keyword yang Lebih Fleksibel
+        setTimeout(() => {
+            let botReply = "Aduh, gue belum connect nih. Coba tanya soal 'bahaya jelantah', 'cara simpan', atau 'setor minyak' ya!";
+            
+            // Cek setiap intent di BOT_BRAIN
+            for (const item of BOT_BRAIN) {
+                // Jika input mengandung salah satu keyword dari intent tersebut
+                const match = item.keywords.some(key => userText.includes(key));
+                if (match) {
+                    botReply = item.reply;
+                    break;
+                }
             }
-        }
+            
+            win.innerHTML += `
+                <div class="flex flex-col gap-1 max-w-[85%] animate-in fade-in slide-in-from-left duration-300">
+                    <span class="text-[10px] font-bold text-slate-500 uppercase ml-2">OilBot</span>
+                    <div class="bg-slate-800 border border-slate-700 p-4 rounded-2xl rounded-tl-none text-sm leading-relaxed text-slate-200">
+                        ${botReply}
+                    </div>
+                </div>`;
+            win.scrollTop = win.scrollHeight;
+        }, 500);
+    }
 
-        // --- FUZZY SEDERHANA UNTUK PENJADWALAN ---
-        // Membership function sederhana (0–1) berbasis label linguistik
-        function membershipVolume(jumlah) {
-            const v = Number(jumlah || 0);
-            // kecil: 0–5, sedang: 3–10, besar: >8 (overlap untuk fuzzy feel)
-            let kecil = 0, sedang = 0, besar = 0;
-            if (v <= 3) kecil = 1;
-            else if (v > 3 && v <= 5) kecil = (5 - v) / 2;
-            if (v >= 3 && v <= 7) sedang = (v - 3) / 4;
-            else if (v > 7 && v <= 10) sedang = (10 - v) / 3;
-            if (v >= 6 && v <= 8) besar = (v - 6) / 2;
-            else if (v > 8) besar = 1;
-            return { kecil, sedang, besar };
-        }
-
-        function membershipFrekuensi(label) {
-            if (label === 'jarang') return { jarang: 1, sedang: 0.2, sering: 0 };
-            if (label === 'sedang') return { jarang: 0.2, sedang: 1, sering: 0.5 };
-            if (label === 'sering') return { jarang: 0, sedang: 0.5, sering: 1 };
-            return { jarang: 0, sedang: 0, sering: 0 };
-        }
-
-        function membershipJarak(label) {
-            if (label === 'dekat') return { dekat: 1, sedang: 0.3, jauh: 0 };
-            if (label === 'sedang') return { dekat: 0.3, sedang: 1, jauh: 0.3 };
-            if (label === 'jauh') return { dekat: 0, sedang: 0.3, jauh: 1 };
-            return { dekat: 0, sedang: 0, jauh: 0 };
-        }
-
-        function membershipKepadatan(label) {
-            if (label === 'rendah') return { rendah: 1, sedang: 0.2, tinggi: 0 };
-            if (label === 'sedang') return { rendah: 0.2, sedang: 1, tinggi: 0.5 };
-            if (label === 'tinggi') return { rendah: 0, sedang: 0.5, tinggi: 1 };
-            return { rendah: 0, sedang: 0, tinggi: 0 };
-        }
-
-        // Inferensi fuzzy sangat sederhana: skor prioritas 0–100
-        function hitungPrioritasPenjemputan() {
-            const jumlah = Number(document.getElementById('jumlah').value || 0);
-            const frekuensi = document.getElementById('frekuensi').value;
-            const jarak = document.getElementById('jarak').value;
-            const kepadatan = document.getElementById('kepadatan').value;
-            const metode = document.getElementById('metode').value;
-
-            const vol = membershipVolume(jumlah);
-            const freq = membershipFrekuensi(frekuensi);
-            const dist = membershipJarak(jarak);
-            const dens = membershipKepadatan(kepadatan);
-
-            // Aturan contoh (bobot manual, bisa kamu jelaskan di laporan):
-            // - Volume besar + kepadatan tinggi + jarak dekat → prioritas tinggi
-            // - Volume kecil + jarak jauh + kepadatan rendah → prioritas rendah
-            let skorTinggi =
-                Math.max(
-                    Math.min(vol.besar, dens.tinggi, dist.dekat),
-                    Math.min(vol.sedang, dens.tinggi, dist.sedang)
-                );
-
-            let skorSedang =
-                Math.max(
-                    Math.min(vol.sedang, dens.sedang, dist.sedang),
-                    Math.min(vol.kecil, dens.tinggi, dist.dekat)
-                );
-
-            let skorRendah =
-                Math.max(
-                    Math.min(vol.kecil, dist.jauh, dens.rendah),
-                    Math.min(vol.kecil, dens.sedang, dist.jauh)
-                );
-
-            // Penyesuaian metode: kalau user pilih Antar Sendiri, prioritas jemput diturunkan
-            if (metode === 'Antar Sendiri') {
-                skorTinggi *= 0.3;
-                skorSedang *= 0.5;
-            }
-
-            // Defuzzifikasi sederhana: weighted average
-            const prioritas =
-                (skorRendah * 30 + skorSedang * 60 + skorTinggi * 90) /
-                (skorRendah + skorSedang + skorTinggi || 1);
-
-            return prioritas; // 0–100
-        }
-
-        function hitungJadwal() {
-            const jumlah = Number(document.getElementById('jumlah').value || 0);
-            if (!jumlah || jumlah <= 0) {
-                document.getElementById('jadwalRekomendasi').innerText = '-';
-                return;
-            }
-            const skor = hitungPrioritasPenjemputan();
-
-            let rekomendasi;
-            if (skor >= 70) rekomendasi = 'Jemput 1–2 hari lagi (Prioritas Tinggi)';
-            else if (skor >= 40) rekomendasi = 'Jemput dalam 3–5 hari';
-            else rekomendasi = 'Gabung jemputan kolektif / Antar sendiri';
-
-            document.getElementById('jadwalRekomendasi').innerText = rekomendasi;
-        }
-
-        // FUNGSI UTAMA: Kirim ke WhatsApp
-        function kirimWhatsApp(e) {
-            e.preventDefault();
-
-            const nama = document.getElementById('nama').value;
-            const noHp = document.getElementById('noHp').value;
-            const alamat = document.getElementById('alamat').value;
-            const metode = document.getElementById('metode').value;
-            const jumlah = Number(document.getElementById('jumlah').value || 0);
-            const totalEstimasi = formatRupiah(jumlah * HARGA_PER_LITER);
-
-            const frekuensi = document.getElementById('frekuensi').value;
-            const jarak = document.getElementById('jarak').value;
-            const kepadatan = document.getElementById('kepadatan').value;
-            const prioritas = hitungPrioritasPenjemputan().toFixed(1);
-            const jadwalText = document.getElementById('jadwalRekomendasi').innerText || '-';
-
-            const pesan =
-                `Halo Admin OilSwap! 👋%0A%0A` +
-                `Saya ingin menyetor minyak jelantah (%0A` +
-                `Swap the drip, secure the bag!)%0A` +
-                `--------------------------------%0A` +
-                `👤 *Nama:* ${nama}%0A` +
-                `📱 *No WA:* ${noHp}%0A` +
-                `📍 *Alamat:* ${alamat}%0A` +
-                `🚚 *Metode:* ${metode}%0A` +
-                `🛢 *Jumlah:* ${jumlah} Liter%0A` +
-                `💰 *Estimasi Pendapatan:* ${totalEstimasi}%0A` +
-                `--------------------------------%0A` +
-                `📊 *Data untuk penjadwalan pintar*%0A` +
-                `• Frekuensi menggoreng: ${frekuensi}%0A` +
-                `• Jarak ke gudang: ${jarak}%0A` +
-                `• Kepadatan area: ${kepadatan}%0A` +
-                `• Skor prioritas jemput (0–100): ${prioritas}%0A` +
-                `• Rekomendasi jadwal sistem: ${jadwalText}%0A` +
-                `--------------------------------%0A` +
-                `Mohon diproses, terima kasih!`;
-
-            const url = `https://wa.me/${6281294949206}?text=${pesan}`;
-            window.open(url, '_blank');
-        }
-
-        // --- NLP SEDERHANA UNTUK CHAT EDUCTION JELANTAH ---
-        function normalisasiTeks(text) {
-            return text.toLowerCase().trim();
-        }
-
-        function responNLP(input) {
-            const t = normalisasiTeks(input);
-
-            // Intent: bahaya jelantah
-            if (t.includes('bahaya') || t.includes('bahaya jelantah') || t.includes('kesehatan')) {
-                return 'Minyak jelantah yang dipakai berulang dapat meningkatkan risiko gangguan kesehatan karena pembentukan senyawa radikal dan karsinogen. Lebih baik disetor ke bank jelantah untuk diolah jadi energi/bahan lain, bukan dikonsumsi lagi.';
-            }
-
-            // Intent: cara simpan minyak
-            if (t.includes('cara simpan') || t.includes('menyimpan') || t.includes('nyimpan')) {
-                return 'Simpan jelantah dalam botol bersih dan tertutup, tunggu dingin sebelum dituangkan, pisahkan dari sampah lain, dan hindari mencampur dengan air atau deterjen. Simpan di tempat teduh sampai volumenya cukup untuk disetor.';
-            }
-
-            // Intent: cara setor / jemput
-            if (t.includes('setor') || t.includes('jemput') || t.includes('penjemputan')) {
-                return 'Kamu bisa setor dengan dua cara: (1) Antar langsung ke gudang/titik kumpul, atau (2) Request penjemputan melalui form di halaman ini. Sistem akan menghitung prioritas jemput berdasarkan volume, jarak, dan kepadatan area.';
-            }
-
-            // Intent: kerja sama UMKM
-            if (t.includes('umkm') || t.includes('kerja sama') || t.includes('produk')) {
-                return 'Minyak jelantah dapat diolah UMKM menjadi produk seperti sabun, lilin, atau bahan bakar alternatif. OilSwap! dapat menghubungkan rumah tangga penyetor dengan UMKM mitra di sekitar wilayahmu melalui penjadwalan dan pencatatan setoran.';
-            }
-
-            // Intent: program lingkungan
-            if (t.includes('lingkungan') || t.includes('perubahan iklim') || t.includes('biodiesel')) {
-                return 'Jelantah yang dikumpulkan bisa diolah menjadi biodiesel sehingga mengurangi pembuangan ke saluran air dan TPA. Ini membantu menurunkan pencemaran serta mendukung transisi energi yang lebih bersih.';
-            }
-
-            // Salam
-            if (t === 'halo' || t === 'hai' || t === 'hi' || t.includes('assalam')) {
-                return 'Halo! Kamu bisa tanya tentang bahaya jelantah, cara simpan, cara setor, atau pemanfaatan jelantah oleh UMKM.';
-            }
-
-            // Default
-            return 'Maaf, bot masih sederhana dan belum paham pertanyaan itu. Coba gunakan kata kunci seperti: "bahaya jelantah", "cara simpan minyak", "setor jelantah", atau "UMKM jelantah".';
-        }
-
-        function appendChat(sender, message) {
-            const chatWindow = document.getElementById('chatWindow');
-            const div = document.createElement('div');
-            div.className = 'text-sm text-gray-700 mb-2';
-            div.innerHTML = `<span class="font-semibold ${sender === 'Bot' ? 'text-green-700' : 'text-blue-700'}">${sender}:</span> ${message}`;
-            chatWindow.appendChild(div);
-            chatWindow.scrollTop = chatWindow.scrollHeight;
-        }
-
-        function handleChat(e) {
-            e.preventDefault();
-            const inputEl = document.getElementById('chatInput');
-            const text = inputEl.value;
-            appendChat('Kamu', text);
-            const jawaban = responNLP(text);
-            setTimeout(() => {
-                appendChat('Bot', jawaban);
-            }, 300);
-            inputEl.value = '';
-        }
-    </script>
-</body>
+    function kirimWhatsApp(e) {
+        e.preventDefault();
+        const nama = document.getElementById('nama').value;
+        const jumlah = document.getElementById('jumlah').value;
+        const alamat = document.getElementById('alamat').value;
+        const metode = document.getElementById('metode').value;
+        
+        const pesan = `Halo Admin! Gue mau Swap Drip! 💧%0A%0A👤 Nama: ${nama}%0A🛢 Jumlah: ${jumlah} Liter%0A📍 Alamat: ${alamat}%0A🚚 Metode: ${metode}%0A%0ALets save the planet! 🌍`;
+        window.open(`https://wa.me/${6281294949206}?text=${pesan}`, '_blank');
+    }
+</script>
